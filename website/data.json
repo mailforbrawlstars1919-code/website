@@ -1,0 +1,26 @@
+{
+  "keys": [
+    {
+      "key": "ABC123-DEF456",
+      "endingTime": "20-11-2025",
+      "hwid": "68EF9875-8A2E-43AA-8B52-F40870FDA31A",
+      "description": "Premium access for 1 year"
+    },
+    {
+      "key": "XYZ789-GHI012",
+      "endingTime": "10-12-2025",
+      "hwid": "a1b2c3d4",
+      "description": "Beta tester key"
+    }
+  ],
+  "blacklist": [
+    {
+      "username": "baduser#1234",
+      "reason": "Abuse detected"
+    },
+    {
+      "hwid": "HWID-EXAMPLE-001",
+      "reason": "Multiple account violation"
+    }
+  ]
+}
