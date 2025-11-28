@@ -2,8 +2,8 @@
   "keys": [
     {
       "key": "ABC123-DEF456",
-      "endingTime": "20-11-2025",
-      "hwid": "53e2381",
+      "endingTime": "30-11-2025",
+      "hwid": "68EF9875-8A2E-43AA-8B52-F40870FDA31A",
       "description": "Premium access for 1 year"
     },
     {
@@ -24,3 +24,4 @@
     }
   ]
 }
+
