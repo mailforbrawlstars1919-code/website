@@ -1,9 +1,11 @@
 "use client";
+
 import React, { useEffect, useState } from 'react';
 
 export default function Home() {
   const [keys, setKeys] = useState([]);
   const [blacklist, setBlacklist] = useState([]);
+  const [version, setVersion] = useState(null);
 
   useEffect(() => {
     fetch('/api/keys')
@@ -12,11 +14,21 @@ export default function Home() {
     fetch('/api/blacklist')
       .then(res => res.json())
       .then(setBlacklist);
+    fetch('/api/version')
+      .then(res => res.json())
+      .then(setVersion);
   }, []);
 
   return (
     <main style={{ maxWidth: 800, margin: '0 auto', padding: 24 }}>
-      <h1>Key List</h1>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+        <h1>Key List</h1>
+        {version && (
+          <span style={{ fontSize: 16, color: '#aaa' }}>
+            Version: {version.version} ({version.date})
+          </span>
+        )}
+      </div>
       <table border="1" cellPadding="8" style={{ width: '100%', marginBottom: 40 }}>
         <thead>
           <tr>
